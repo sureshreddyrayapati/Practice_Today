@@ -1,0 +1,28 @@
+﻿@model Mphasis
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<div class="border p-3 mt-4">
+    <div class=" row pb-3">
+        <h2 class="text-primary">Mphasis Employees</h2>
+        <hr/>
+    </div>
+        
+    <div class="row mb-3">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"/>
+        
+    </div>
+    <div class="row mb-3">
+        <label asp-for="Loction"></label>
+        <input asp-for="Loction" class="form-control"/>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="joinDate"></label>
+        <input type="datetime" asp-for="joinDate" class="form-control" />
+    </div>
+    <button class="btn btn-primary" type="submit">Create</button>
+</div>
+<a asp-action="Index" asp-controller="Mphasis" >Back to List</a>

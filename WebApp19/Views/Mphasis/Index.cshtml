@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebApp19.Models.Mphasis>
+
+@{
+    ViewData["Title"] = "Mphasis Employee Details";
+}
+<div class="container p-4">
+    <div class="row p-3">
+        <div class="col-6">
+            Employees
+        </div>
+        <div class="col-6">
+            <i class="bi bi-plus-circle"></i> <a class="btn btn-primary" asp-action="Create" asp-controller="Mphasis">Create New</a>
+        </div>
+    </div>
+
+</div>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Employee Id
+            </th>
+            <th>
+                Employee Name
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Joinig date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var list in Model)
+        {
+        <tr>
+                <td>
+                    @list.Id
+                </td>
+            <td>
+                @list.Name
+            </td>
+             <td>
+                @list.Loction
+            </td>
+            <td>
+                @list.joinDate
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
