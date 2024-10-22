@@ -6,7 +6,7 @@
 <div class="container p-4">
     <div class="row p-3">
         <div class="col-6">
-            Employees
+            <h1>Employees</h1>
         </div>
         <div class="col-6">
             <i class="bi bi-plus-circle"></i> <a class="btn btn-primary" asp-action="Create" asp-controller="Mphasis">Create New</a>
@@ -29,6 +29,7 @@
             <th>
                 Joinig date
             </th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -46,6 +47,11 @@
             </td>
             <td>
                 @list.joinDate
+            </td>
+            <td role="group">
+                    <a asp-action="Edit" asp-controller="Mphasis" asp-route-id="@list.Id"><i class="bi bi-pen"></i></a>
+                    <a asp-action="Delete" asp-controller="Mphasis" asp-route-id="@list.Id"><i class="bi bi-trash3-fill"></i></a>
+
             </td>
         </tr>
         }

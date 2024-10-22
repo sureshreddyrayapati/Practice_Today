@@ -1,16 +1,16 @@
 ﻿@model Mphasis
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
 <h1>Create</h1>
-<form asp-action="Create" method="post">
+<form asp-action="Edit" method="post">
 <div class="border p-3 mt-4">
     <div class=" row pb-3">
-        <h2 class="text-primary">Mphasis Employees</h2>
+        <h2 class="text-primary">Update Employee</h2>
         <hr/>
     </div>
-   <div asp-validation-summary=All></div>
+        
     <div class="row mb-3">
         <label asp-for="Name"></label>
         <input asp-for="Name" class="form-control"/>
@@ -24,7 +24,7 @@
         <label asp-for="joinDate"></label>
         <input type="datetime" asp-for="joinDate" class="form-control" />
     </div>
-    <button class="btn btn-primary" type="submit">Create</button>
+    <button class="btn btn-primary" type="submit">Update</button>
 </div>
 </form>
 <a asp-action="Index" asp-controller="Mphasis" >Back to List</a>
