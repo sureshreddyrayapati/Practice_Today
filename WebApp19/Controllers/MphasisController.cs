@@ -29,6 +29,7 @@ namespace WebApp19.Controllers
             {
                 _context.mphases.Add(newMphasis);
                 _context.SaveChanges();
+                TempData["success"] = "create new record";
                 return RedirectToAction("Index");
             }
             return View(newMphasis);
@@ -54,7 +55,8 @@ namespace WebApp19.Controllers
             if (ModelState.IsValid)
             {
                 _context.mphases.Update(obj);
-              _context.SaveChanges();
+                _context.SaveChanges();
+                TempData["success"] = "update recorded";
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Index");
@@ -81,6 +83,7 @@ namespace WebApp19.Controllers
             {
                 _context.mphases.Remove(mphasis);
                 _context.SaveChanges();
+                TempData["success"] = "delete record successfully";
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Index");
